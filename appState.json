@@ -1,0 +1,134 @@
+{
+  "EDITOR_STATE": {
+    "allProjectFiles": {
+      "d22d50d5-7d27-4840-95b5-4876e33c1eda": {
+        "id": "d22d50d5-7d27-4840-95b5-4876e33c1eda",
+        "parent": null,
+        "name": "hiru290719_Pythondep002",
+        "type": "DIRECTORY",
+        "isDirectory": true,
+        "children": [
+          "61b32593-d7bf-4cc6-baef-32c8aaeaaeba",
+          "eb1677bc-5b66-470c-a211-7391b5ed0797",
+          "a4aa4fcd-d7de-4c84-b921-45397e1c639f"
+        ],
+        "isRemovable": false,
+        "filePath": "hiru290719_Pythondep002"
+      },
+      "61b32593-d7bf-4cc6-baef-32c8aaeaaeba": {
+        "id": "61b32593-d7bf-4cc6-baef-32c8aaeaaeba",
+        "parent": "d22d50d5-7d27-4840-95b5-4876e33c1eda",
+        "name": "lambda.js",
+        "type": "JS_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru290719_Pythondep002/lambda.js",
+        "code": "\nexports.handler = function(event, context, callback) {\n    \n    callback(null, {\"message\": \"Successfully executed\"});\n}",
+        "config": {
+          "runtime": "nodejs8.10",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": []
+      },
+      "eb1677bc-5b66-470c-a211-7391b5ed0797": {
+        "id": "eb1677bc-5b66-470c-a211-7391b5ed0797",
+        "parent": "d22d50d5-7d27-4840-95b5-4876e33c1eda",
+        "name": "importnumpy.py",
+        "type": "PYTHON_LAMBDA",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru290719_Pythondep002/importnumpy.py",
+        "code": "import numpy\n\ndef handler(event, context):\n    x = numpy.linspace(0, 10, 5000)\n    return {\"message\": str(x)}\n",
+        "config": {
+          "runtime": "python3.6",
+          "handler": "handler",
+          "timeout": 60,
+          "memory": 128,
+          "layers": []
+        },
+        "triggers": [],
+        "testCases": {
+          "0567d1a0-6c09-413b-b67d-4115803df109": {
+            "id": "0567d1a0-6c09-413b-b67d-4115803df109",
+            "name": "Unnamed event",
+            "functionId": "eb1677bc-5b66-470c-a211-7391b5ed0797",
+            "event": "{\n    \"key1\": \"value1\",\n    \"key2\": \"value2\",\n    \"key3\": \"value3\"\n}"
+          }
+        }
+      },
+      "a4aa4fcd-d7de-4c84-b921-45397e1c639f": {
+        "id": "a4aa4fcd-d7de-4c84-b921-45397e1c639f",
+        "parent": "d22d50d5-7d27-4840-95b5-4876e33c1eda",
+        "name": "__init__.py",
+        "type": "PYTHON_FILE",
+        "isDirectory": false,
+        "children": [],
+        "isRemovable": true,
+        "filePath": "hiru290719_Pythondep002/__init__.py",
+        "code": ""
+      }
+    },
+    "deletedFiles": [],
+    "rootNode": "d22d50d5-7d27-4840-95b5-4876e33c1eda",
+    "openFiles": [
+      "61b32593-d7bf-4cc6-baef-32c8aaeaaeba",
+      "eb1677bc-5b66-470c-a211-7391b5ed0797"
+    ],
+    "currentFileId": "eb1677bc-5b66-470c-a211-7391b5ed0797",
+    "resources": {},
+    "customTemplate": {
+      "dialect": null,
+      "definitions": {}
+    },
+    "envVariables": [
+      {
+        "lambdaId": "all",
+        "varKey": "SIGMA_AWS_ACC_ID",
+        "varValue": null,
+        "shouldPersist": false,
+        "displayOnly": false,
+        "editable": false
+      },
+      {
+        "lambdaId": "eb1677bc-5b66-470c-a211-7391b5ed0797",
+        "varKey": "PYTHONPATH",
+        "varValue": "/var/runtime:/var/task/hiru290719_Pythondep002",
+        "shouldPersist": true,
+        "displayOnly": false,
+        "editable": true
+      }
+    ],
+    "packageJSON": {
+      "dependencies": {
+        "numpy": {
+          "name": "numpy",
+          "version": "1.14.3",
+          "dev": false,
+          "language": "python"
+        }
+      }
+    }
+  },
+  "PROJECT_META": {
+    "projectName": "hiru290719_Pythondep002",
+    "projectDescription": "",
+    "projectVersion": "1.0.0",
+    "projectRegion": "us-east-1",
+    "platform": "AWS",
+    "platformRegions": {},
+    "lastSave": 1564392338808
+  },
+  "VCS_STATE": {
+    "provider": "GitHub",
+    "repo": {
+      "name": "hiru290719_Pythondep002",
+      "url": "https://github.com/HirudineeADRT/hiru290719_Pythondep002",
+      "branches": []
+    }
+  }
+}
