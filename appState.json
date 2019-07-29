@@ -43,7 +43,7 @@
         "children": [],
         "isRemovable": true,
         "filePath": "hiru290719_Pythondep002/importnumpy.py",
-        "code": "import numpy\n\ndef handler(event, context):\n    x = numpy.linspace(0, 10, 5000)\n    return {\"message\": str(x)}\n",
+        "code": "import numpy\nimport requests\n\ndef handler(event, context):\n\n    x = numpy.linspace(0, 10, 5000)\n    r = requests.get('https://api.github.com/user', auth=('user', 'pass'))\n    print (r)\n    return {\"message\": str(x)}\n",
         "config": {
           "runtime": "python3.6",
           "handler": "handler",
@@ -51,7 +51,12 @@
           "memory": 128,
           "layers": []
         },
-        "triggers": [],
+        "triggers": [
+          {
+            "resourceName": "apigusEast1Hirupythonsecondprojectget",
+            "config": {}
+          }
+        ],
         "testCases": {
           "0567d1a0-6c09-413b-b67d-4115803df109": {
             "id": "0567d1a0-6c09-413b-b67d-4115803df109",
@@ -80,7 +85,35 @@
       "eb1677bc-5b66-470c-a211-7391b5ed0797"
     ],
     "currentFileId": "eb1677bc-5b66-470c-a211-7391b5ed0797",
-    "resources": {},
+    "resources": {
+      "apigusEast1Hirupythonsecondprojectget": {
+        "name": "apigusEast1Hirupythonsecondprojectget",
+        "type": "API_GATEWAY",
+        "config": {
+          "selectedRegion": "us-east-1",
+          "apiMode": 1,
+          "apiName": "Hiru_python",
+          "apiId": "m1cwcq21hf",
+          "endpointType": "REGIONAL",
+          "rootResourceId": "5aivyaxve2",
+          "existingResources": {
+            "/": "5aivyaxve2",
+            "/test/path": "m7tva5",
+            "/test": "zdnv22"
+          },
+          "resourceMode": 0,
+          "resourceName": "second/project",
+          "resourcePath": "/second/project",
+          "restMethod": "GET",
+          "proxyIntegration": false,
+          "enableCORS": false,
+          "stageMode": 1,
+          "stageName": "Test",
+          "stageDeploymentId": "bdz7jq",
+          "mode": 1
+        }
+      }
+    },
     "customTemplate": {
       "dialect": null,
       "definitions": {}
@@ -110,6 +143,12 @@
           "version": "1.14.3",
           "dev": false,
           "language": "python"
+        },
+        "requests": {
+          "name": "requests",
+          "version": "2.22.0",
+          "dev": false,
+          "language": "python"
         }
       }
     }
@@ -121,14 +160,19 @@
     "projectRegion": "us-east-1",
     "platform": "AWS",
     "platformRegions": {},
-    "lastSave": 1564392338808
+    "lastSave": 1564393565367
   },
   "VCS_STATE": {
     "provider": "GitHub",
     "repo": {
       "name": "hiru290719_Pythondep002",
       "url": "https://github.com/HirudineeADRT/hiru290719_Pythondep002",
-      "branches": []
+      "branches": [
+        {
+          "name": "master",
+          "hash": "c1fd4bdd60151f9515c1bc36371e0ab9e9a2e069"
+        }
+      ]
     }
   }
 }
